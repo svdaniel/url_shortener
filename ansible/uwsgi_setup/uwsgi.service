@@ -2,7 +2,7 @@
 Description=uWSGI Emperor service
 
 [Service]
-ExecStart=/opt/venv/bin/uwsgi --emperor /opt/url_shortener/uwsgi_setup
+ExecStart=/opt/venv/bin/uwsgi --emperor /opt/url_shortener/ansible/uwsgi_setup
 Restart=always
 KillSignal=SIGQUIT
 Type=notify
