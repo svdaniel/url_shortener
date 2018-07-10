@@ -1,1 +1,1 @@
-Python3.6 + Django + uWSGI + Nignx
+Project to shorten urls leveraging Python3.6 + Django + uWSGI + Nignx

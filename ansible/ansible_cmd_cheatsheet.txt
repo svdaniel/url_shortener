@@ -1,0 +1,3 @@
+# add master key to remote host
+ansible-playbook playbooks/initial_setup-deploy_authorized_key.yml -i inventory -k
+

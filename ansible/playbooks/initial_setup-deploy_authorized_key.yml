@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  gather_facts: False
+  remote_user: root
+
+  tasks:
+    - name: add authorized_key
+      authorized_key: user=root
+                      state=present
+                      manage_dir=yes
+                      key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"

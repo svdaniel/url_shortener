@@ -1,0 +1,32 @@
+---
+
+- hosts: all
+  gather_facts: False
+  remote_user: root
+
+# yum update -y
+- name: upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+
+- name: ensure a list of packages installed
+  yum:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+    - gcc
+    - gcc-c++
+    - make
+    - git
+    - patch
+    - openssl-devel
+    - zlib-devel
+    - readline-devel
+    - sqlite-devel
+    - bzip2-devel
+    - https://centos7.iuscommunity.org/ius-release.rpm # ius-release installation
+    - python36u
+    - python36u-pip
+    - python36u-devel
