@@ -7,7 +7,7 @@
     state: present
 
 - name: Configure nginx server
-  template: src=nginx.conf dest=/opt/nginx/
+  template: src=nginx.conf dest=/etc/nginx/
   notify: restart nginx
 
 - name: start nginx

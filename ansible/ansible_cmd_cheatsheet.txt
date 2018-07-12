@@ -6,7 +6,7 @@ ssh-keygen -t rsa -b 4096 -C "daniel.svoboda@twisto.com" -N "" -f ~/.ssh/id_rsa
 ansible-playbook django_nginx_setup/roles/deploy_authorized_key/tasks/main.yml -i django_nginx_setup/hosts -k
 
 # create priviledged user
-ansible-playbook django_nginx_setup/site.yml
+ansible-playbook django_nginx_setup/site.yml -i django_nginx_setup/hosts
 
 
 
