@@ -13,7 +13,7 @@
 
 - name: django collectstatic
   django_manage:
-    command: collectstatic --noinput
+    command: "collectstatic --noinput"
     app_path: "{{ django_app_path }}"
     virtualenv: "{{ virtualenv }}"
-    virtualenv_command: "{{ virtualenv_command }}"
+#    virtualenv_command: "{{ virtualenv_command }}"
