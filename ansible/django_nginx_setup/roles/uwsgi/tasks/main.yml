@@ -7,7 +7,7 @@
     state: present
 
 - name: configure uwsgi daemon
-  template: src=uwsgi.service dest=/opt/systemd/system/
+  template: src=uwsgi.service dest=/etc/systemd/system/
 
 - name: force reload systemd to re-read configs
   systemd:
