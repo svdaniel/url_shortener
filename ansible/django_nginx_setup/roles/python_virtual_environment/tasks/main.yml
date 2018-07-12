@@ -1,0 +1,4 @@
+___
+
+- name: install virtual environment
+  raw: python3.6 -m venv /opt/venv

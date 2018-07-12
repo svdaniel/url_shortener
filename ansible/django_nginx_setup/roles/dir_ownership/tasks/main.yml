@@ -1,0 +1,13 @@
+___
+
+
+- name: Change ownership of Django project directories
+  file: path=/opt/url_shortener/ owner=nginx group=nginx state=directory recurse=yes
+
+- name: Change ownership of Virtual environment directories
+  file: path=/opt/venv/ owner=nginx group=nginx state=directory recurse=yes
+
+#- name: add user twisto
+#  user: name=twisto group=twisto home=/usr/share/twisto createhome=no
+#  become: True
+#  become_method: sudo

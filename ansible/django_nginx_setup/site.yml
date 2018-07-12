@@ -1,0 +1,16 @@
+---
+
+- hosts: django_nginx
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - deploy_authorized_key
+    - centos_python36_setup
+    - python_virtual_environment
+    - django_project
+    - uwsgi
+    - nginx
+    - dir_ownership
+    - firewall

@@ -1,0 +1,21 @@
+---
+
+
+- name: install uwsgi
+  pip:
+    name: "uwsgi"
+    state: present
+
+- name: configure uwsgi daemon
+  template: src=uwsgi.service dest=/opt/systemd/system/
+
+- name: force reload systemd to re-read configs
+  systemd:
+    daemon_reload: yes
+
+- name: start & enable uwsgi
+  systemd:
+    name: uwsgi
+    state: restarted
+    enabled: yes
+

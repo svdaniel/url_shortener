@@ -3,12 +3,16 @@
 - hosts: all
   remote_user: root
 
+  vars:
+    - password:  'f71b0e4e46773be97275c0032fa72fa0498e9c5a1e849d0ebd2fe414882b932d7d0a8e9102beee4d1a5ac111d884123110ead2b7d78585e41e77c960ec9938d6'
+
   tasks:
     - name: Create a login user
       user:
         name: letstest
-        password: 'f71b0e4e46773be97275c0032fa72fa0498e9c5a1e849d0ebd2fe414882b932d7d0a8e9102beee4d1a5ac111d884123110ead2b7d78585e41e77c960ec9938d6'
-        groups: wheel
+        password: {{ password }}
+        update_password: on_create
+        group: wheel
         state: present
         shell: /bin/bash
         system: no

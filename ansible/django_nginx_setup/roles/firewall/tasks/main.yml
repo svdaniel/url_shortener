@@ -1,0 +1,20 @@
+___
+
+
+- name: allow http
+  firewalld:
+  service: http
+  zone: public
+  permanent: true
+  state: enabled
+
+- name: bounce firewalld
+  service:
+    name=firewalld
+    state=restarted
+
+- name: ensure firewalld is enabled & running
+  service:
+    name=firewalld
+    state=started
+    enabled=yes

@@ -1,0 +1,25 @@
+---
+
+- name: django collecstatic
+  django_manage:
+  command: "collecstatic --noinput"
+  app_path: "{{ django_app_path }}"
+  virtualenv: "{{ django_virtualenv }}"
+
+- name: django createsuperuser
+  django_manage:
+  command: "createsuperuser --noinput --username={{ django_superuser }} --email={{ django_superuser_email }}"
+  app_path: "{{ django_app_path }}"
+  virtualenv: "{{ django_virtualenv }}"
+
+#- name: django
+#  django_manage:
+#  command:
+#  app_path: "{{ django_app_path }}"
+#  virtualenv: "{{ django_virtualenv }}"
+#
+#- name: django
+#  django_manage:
+#  command:
+#  app_path: "{{ django_app_path }}"
+#  virtualenv: "{{ django_virtualenv }}"

@@ -1,0 +1,16 @@
+---
+
+- name: git clone url_shortening repo
+  git:
+    repo: "{{ django_git_repo }}"
+    dest: /opt/
+
+- pip:
+    requirements: /opt/url_shortener/requirements.txt
+    virtualenv: /opt/venv
+
+- name: django collecstatic
+  django_manage:
+  command: "collecstatic --noinput"
+  app_path: "{{ django_app_path }}"
+  virtualenv: "{{ django_virtualenv }}"

@@ -1,0 +1,15 @@
+nginx_user:  nginx
+nginx_port:  80
+nginx_server_name:  test.twst.cz www.test.twst.cz
+nginx_static_location:  /opt/url_shortener/url_shortener
+nginx_uwsgi_pass_location:  /run/uwsgi.sock
+
+django_git_repo: https://github.com/svdaniel/url_shortener.git
+django_app_path:  /opt/url_shortener/url_shortener
+django_virtualenv:  /opt/venv/bin
+django_superuser: twisto
+django_superuser_email: twisto@twisto.cz
+
+uwsgi_path_to_uwsgi:  /opt/venv/bin/uwsgi
+uwsgi_path_to_uwsgi_ini_file:  /opt/url_shortener/ansible/django_nginx_setup/roles/uwsgi/templates/uwsgi_setup.ini
+
