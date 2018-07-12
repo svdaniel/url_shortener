@@ -1,5 +1,0 @@
----
-
-- name: install virtual environment
-  command: /usr/bin/python3.6 -m venv /opt/venv
-  # raw: python3.6 -m venv /opt/venv

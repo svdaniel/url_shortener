@@ -6,9 +6,11 @@ nginx_uwsgi_pass_location:  /run/uwsgi.sock
 
 django_git_repo: https://github.com/svdaniel/url_shortener.git
 django_app_path:  /opt/url_shortener/url_shortener
-django_virtualenv:  /opt/venv/bin
 django_superuser: twisto
 django_superuser_email: twisto@twisto.cz
+
+virtualenv:  /opt/venv
+virtualenv_command: /usr/bin/python3.6 -m venv
 
 uwsgi_path_to_uwsgi:  /opt/venv/bin/uwsgi
 uwsgi_path_to_uwsgi_ini_file:  /opt/url_shortener/ansible/django_nginx_setup/roles/uwsgi/templates/uwsgi_setup.ini

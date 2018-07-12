@@ -18,3 +18,24 @@
         system: no
         createhome: yes
         home: /home/letstest
+
+
+
+
+
+---
+
+- hosts: all
+  remote_user: root
+
+  tasks:
+    - name: git clone url_shortening repo
+      git:
+        repo: https://github.com/svdaniel/url_shortener.git
+        dest: /opt/url_shortener
+
+    - name: pip install
+      pip:
+        requirements: /opt/requirements.txt
+        virtualenv: /opt/venv
+        virtualenv_command: /usr/bin/python3.6 -m venv
