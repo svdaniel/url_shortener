@@ -1,3 +1,5 @@
+---
+
 nginx_user:  nginx
 nginx_port:  80
 nginx_server_name:  test.twst.cz www.test.twst.cz
