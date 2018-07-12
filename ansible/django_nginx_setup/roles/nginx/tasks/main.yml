@@ -12,7 +12,7 @@
 
 - name: start nginx
   service:
-    name=nginx
-    state=started
-    enabled=yes
+    name: nginx
+    state: started
+    enabled: yes
 

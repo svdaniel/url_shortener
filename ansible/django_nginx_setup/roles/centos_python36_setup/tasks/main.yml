@@ -12,17 +12,17 @@
     state: present
   vars:
     packages:
-    - gcc
-    - gcc-c++
-    - make
-    - git
-    - patch
-    - openssl-devel
-    - zlib-devel
-    - readline-devel
-    - sqlite-devel
-    - bzip2-devel
-    - https://centos7.iuscommunity.org/ius-release.rpm # ius-release installation
-    - python36u
-    - python36u-pip
-    - python36u-devel
+      - gcc
+      - gcc-c++
+      - make
+      - git
+      - patch
+      - openssl-devel
+      - zlib-devel
+      - readline-devel
+      - sqlite-devel
+      - bzip2-devel
+      - https://centos7.iuscommunity.org/ius-release.rpm # ius-release installation
+      - python36u
+      - python36u-pip
+      - python36u-devel

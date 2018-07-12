@@ -2,11 +2,11 @@
 
 - name: start uwsgi
   service:
-    name=uwsgi
-    state=started
-    enabled=yes
+    name: uwsgi
+    state: started
+    enabled: yes
 
 - name: restart uwsgi
   service:
-    name=uwsgi
-    state=restarted
+    name: uwsgi
+    state: restarted
