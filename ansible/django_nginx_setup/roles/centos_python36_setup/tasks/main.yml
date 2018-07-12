@@ -7,9 +7,6 @@
     state: latest
 
 - name: ensure a list of packages installed
-  yum:
-    name: "{{ packages }}"
-    state: present
   vars:
     packages:
       - gcc
@@ -26,3 +23,7 @@
       - python36u
       - python36u-pip
       - python36u-devel
+
+  yum:
+    name: "{{ packages }}"
+    state: present
