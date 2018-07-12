@@ -8,10 +8,3 @@ ansible-playbook django_nginx_setup/roles/deploy_authorized_key/tasks/main.yml -
 # create priviledged user
 ansible-playbook django_nginx_setup/site.yml -i django_nginx_setup/hosts
 
-
-
-
-
-
-
-
