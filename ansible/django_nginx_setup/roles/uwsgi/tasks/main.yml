@@ -4,7 +4,8 @@
 - name: install uwsgi
   pip:
     name: "uwsgi"
-    state: present
+    virtualenv: "{{ virtualenv }}"
+    virtualenv_command: "{{ virtualenv_command }}"
 
 - name: configure uwsgi daemon
   template: src=uwsgi.service dest=/etc/systemd/system/
