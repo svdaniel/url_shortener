@@ -7,7 +7,6 @@
 
   roles:
     - centos_python36_setup
-    - python_virtual_environment
     - django_project
     - uwsgi
     - nginx
