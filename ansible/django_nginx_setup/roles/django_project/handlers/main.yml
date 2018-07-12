@@ -2,7 +2,7 @@
 
 - name: django collecstatic
   django_manage:
-  command: "collecstatic --noinput"
+  command: collecstatic --noinput
   app_path: "{{ django_app_path }}"
   virtualenv: "{{ django_virtualenv }}"
 
