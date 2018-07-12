@@ -19,7 +19,7 @@
       - readline-devel
       - sqlite-devel
       - bzip2-devel
-      - https://centos7.iuscommunity.org/ius-release.rpm # ius-release installation
+      - https://centos7.iuscommunity.org/ius-release.rpm
       - python36u
       - python36u-pip
       - python36u-devel
