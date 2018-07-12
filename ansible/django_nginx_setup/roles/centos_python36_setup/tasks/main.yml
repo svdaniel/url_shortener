@@ -8,19 +8,21 @@
 
 - name: ensure a list of packages installed
   yum:
-    name:
-      gcc,
-      gcc-c++,
-      make,
-      git,
-      patch,
-      openssl-devel,
-      zlib-devel,
-      readline-devel,
-      sqlite-devel,
-      bzip2-devel,
-      https://centos7.iuscommunity.org/ius-release.rpm,
-      python36u,
-      python36u-pip,
-      python36u-devel
+    name: "{{ item }}"
     state: present
+  with_items:
+    - gcc
+    - gcc-c++
+    - make
+    - git
+    - patch
+    - openssl-devel
+    - zlib-devel
+    - readline-devel
+    - sqlite-devel
+    - bzip2-devel
+    - https://centos7.iuscommunity.org/ius-release.rpm
+    - python36u
+    - python36u-pip
+    - python36u-devel
+
