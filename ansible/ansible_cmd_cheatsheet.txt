@@ -2,10 +2,11 @@
 ssh-keygen -t rsa -b 4096 -C "daniel.svoboda@twisto.com" -N "" -f ~/.ssh/id_rsa
 
 # add master key to remote host
-ansible-playbook playbooks/initial_setup-deploy_authorized_key.yml -i inventory -k
+# cd to root directory of ansible setup (where ansible.cfg is)
+ansible-playbook django_nginx_setup/roles/deploy_authorized_key/tasks/main.yml -i django_nginx_setup/hosts -k
 
 # create priviledged user
-ansible-playbook playbooks/create_priviledged_user.yml -i inventory
+ansible-playbook django_nginx_setup/site.yml
 
 
 

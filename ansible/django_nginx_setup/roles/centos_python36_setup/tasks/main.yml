@@ -1,9 +1,5 @@
 ---
 
-- hosts: all
-  gather_facts: False
-  remote_user: root
-
 # yum update -y
 - name: upgrade all packages
   yum:

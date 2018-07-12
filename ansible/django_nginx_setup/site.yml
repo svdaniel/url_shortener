@@ -6,7 +6,6 @@
   become_method: sudo
 
   roles:
-    - deploy_authorized_key
     - centos_python36_setup
     - python_virtual_environment
     - django_project
