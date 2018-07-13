@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#+^^w6te_yk*ylsk%g*u_*gb+me&u-b$m3*r5mrfv88@j#^eb0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['test.twst.cz', '127.0.0.1']
 
