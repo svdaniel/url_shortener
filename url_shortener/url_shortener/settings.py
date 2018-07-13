@@ -26,7 +26,7 @@ SECRET_KEY = '9w7^8sv(3%i1w_^8z2%)y_cib*m&wtf5yrqunr8qj+sbg*ucq*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test.twst.cz', '127.0.0.1']
+ALLOWED_HOSTS = ['twst.cz', '127.0.0.1']
 
 
 # Application definition

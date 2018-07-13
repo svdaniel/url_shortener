@@ -2,7 +2,7 @@
 
 nginx_user:  nginx
 nginx_port:  80
-nginx_server_name:  test.twst.cz www.test.twst.cz
+nginx_server_name:  twst.cz www.twst.cz
 nginx_static_location:  /opt/url_shortener/url_shortener
 nginx_uwsgi_pass_location:  /run/uwsgi.sock
 
