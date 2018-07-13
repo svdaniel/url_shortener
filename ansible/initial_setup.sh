@@ -1,8 +1,4 @@
 
-useradd twisto --no-create-home
-usermod -aG wheel twisto
-echo "twisto:shortenme" | chpasswd
-
 yum update -y
 
 yum install -y  gcc gcc-c++ make git patch openssl-devel zlib-devel readline-devel sqlite-devel bzip2-devel
@@ -53,3 +49,6 @@ systemctl restart nginx
 	printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
 	systemctl daemon-reload
 
+# useradd twisto --no-create-home
+# usermod -aG wheel twisto
+# echo "twisto:shortenme" | chpasswd
